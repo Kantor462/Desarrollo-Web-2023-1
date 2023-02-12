@@ -1,6 +1,7 @@
 :root{
     --white:#fff;
     --blue: #74edf8;
+    --black:  rgb(0, 0, 0);
 }
 
 body{
@@ -9,9 +10,6 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
     padding: 50px 0;
-
-
-    
 }
 
 .container{
@@ -22,21 +20,22 @@ justify-content: center;
 }
 
 .flex-outer,.flex-inner{
-    list-style-type:none;
+list-style-type:none;
 padding: 0;
 
 }
 
-.flex-inner{
-    max-width: 800;
-    margin: 0 auto;
+.flex-inner{   
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between ;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.flex-outer li,.flex-inner{
+.flex-inner li{
+    flex: 0 0 calc(20% - 10px);    
+}
+
+.flex-outer li{
    display: flex;
    flex-wrap: wrap;
    align-items: center;
@@ -49,7 +48,7 @@ padding: 0;
     margin-right: 20px;
 }
 
-.flex-outer li label,.flex-inner li p{
+.flex-outer li label{
     padding: 8px;
     font-weight: 300;
     letter-spacing: .09em;
@@ -60,7 +59,13 @@ padding: 0;
     max-width: 220px;
 }
 
-.flex-outer > li > label +*,.flex-inner li{
+.flex-outer > li > label +*{
     
 flex: 1 0 220px;
+flex-direction: row;
+}
+.container button{
+background-color: var(--black);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: #fff;
 }
