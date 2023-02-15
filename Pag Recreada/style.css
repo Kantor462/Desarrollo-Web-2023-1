@@ -1,0 +1,23 @@
+.Boton{
+    margin-left: 300px;
+    display: flex;
+    margin: 0%;
+    padding: 0%;
+    width: 154px;
+    border: none;
+}
+
+.Boton > img{
+    width: auto;
+    height: 30px;
+}
+
+.Head_Flex{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+}
+
+.options a{
+    padding: 12px;
+
+}
