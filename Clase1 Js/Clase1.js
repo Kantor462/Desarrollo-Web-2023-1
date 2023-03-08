@@ -118,9 +118,119 @@ ARRAY();
 console.log(numeros.length);
 
 for (let i = 0; i < numeros.length; i++) {
-
     console.log("El array modificado es: " + numeros[i]);
-
 }
 
 
+let sumita =(number) => {return number +5;}
+
+let f = sumar;
+
+console.log(f(5));
+console.log(sumita(5));
+
+/** callback functions
+ * 
+ * Se trata de enviarle como parametro de entrada a una func:
+ * otra func*/
+
+console.log("-----------Es par regresando un bool-----------");
+
+const esPar = (numero) =>{
+    return numero%2 ==0;//Regresa un boolean
+}
+
+const Validadero =(numero,callbackFn)=>{
+
+    const esPar = callbackFn(numero);
+    console.log("El número es entero?: "+esPar);
+}
+
+Validadero(9,esPar);
+
+const divX2 = (numerillo) =>{ return numerillo/2;}
+
+const dividenum =(numerillo,callbackfn) =>{
+
+    return callbackfn(numerillo);
+}
+
+console.log("Dividido x2");
+console.log(dividenum(10,divX2));
+
+const numeras = [1,2,3,20,893,452];
+let numeras2 = [1,2,3,20,893,452];
+
+//Reducir()
+
+console.log("-------------Reducción por suma-------------");
+
+const SumaValores = numeras2.reduce ((acumulador,valoractual) => {
+
+        return acumulador+valoractual;
+
+})
+
+console.log(SumaValores);
+
+//.foreach()
+
+console.log("-------------ForEach-------------");
+
+const fnDos = numeras2.forEach(number => {
+
+    console.log(number);
+
+})
+
+//.filter()
+
+console.log("-------------Filter-------------");
+
+const fnTres = numeras2.filter(number =>{
+    return number>10;
+})
+
+console.log(fnTres);
+
+//.MAP()
+
+console.log("-------------Map-------------");
+
+const nombresPerson = ["Juan","Pedro","Pablo","Andrés"];
+
+const ANUNCIOS = nombresPerson.map(miembro =>{
+
+    return miembro+" Se ha unido al grupo";
+});
+
+console.log(ANUNCIOS);
+
+
+console.log("");
+console.log("-------------Actividad-------------");
+
+//Callback function
+
+const multip = numerom =>{
+
+return numerom*2
+}
+
+const Result = (numerom,callbackFn)=>{
+
+    const multip = callbackFn(numerom)
+    console.log("El resultado de "+numerom+" multiplicado por 2 es: "+ multip);
+}
+
+Result(10,multip)
+
+console.log("----------Array-----------");
+
+const edades = [15,16,17,18,19,20,21];
+
+const edades1 = edades.filter(numeraco =>{
+    return numeraco>= 18;
+})
+
+console.log("En Colombia eres mayor de edad a partir de estas edades: "+ edades1);
