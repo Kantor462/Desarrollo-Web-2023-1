@@ -99,7 +99,7 @@ const restautante ={
     CaracteristicasR: {
         nit: '151.91282.09-8',
         Dirección: 'Cra 54 #33-12',
-        Especialidad: 'Comida Rapida', 
+        Especialidad: 'Platos A La Carta', 
     },
 
     // Metodos
@@ -118,28 +118,44 @@ console.log(restautante.Carac());
 
 // Segundo Punto
 class Restaurantes{
-    constructor(nombreRES,sonido){
-    this.nombreA = nombreA;
-    this.edadA = edadA;
-    this.sonido = sonido;
+    constructor(nombreRES,sedesRes,Dueño){
+    this.nombreRES = nombreRES;
+    this.sedesRes = sedesRes;
+    this.Dueño = Dueño;
     }
 
-    sonido(){
-        return`${this.nombreA} hace el sonido: ${this.sonido}`;
+    sedes(){
+        return`La cantidad de sedes que tiene el restaurante ${this.nombreRES} es: ${this.sedesRes}`;
     }
 }
 
 // Herencia. Palabra clave Extends
-class Gatos extends Animales{
+class Especialidad extends Restaurantes{
 
-    // constructor de la clase gatos
+    // constructor de la clase Especialidad
 
-    constructor(nombreA,edadA,sonido,cazador){
-        super(nombreA,edadA,sonido)
-        this.cazador = cazador;
+    constructor(nombreRES,SedesRes,Dueño,Especialidad){
+        super(nombreRES,SedesRes,Dueño)
+        this.Especialidad = Especialidad;
     }
 
-    maullar(){
-        return `yo puedo hacer el sonido ${this.sonido}`
+    cocinas(){
+        return `La cantidad de cocinas que hay son: ${this.sedesRes}`
     }
+    
 }
+
+// Crear un Restaurante, especialidad comidas rapidas
+
+let Restaurante1 = new Especialidad ('De La Kassa',7,"Cesar Andrés",'Comidas Rápidas')
+console.log("2.");
+console.log(Restaurante1);
+
+// Tercer Punto
+
+    const Retornador = () => {
+    return `Los datos Del Restaurante ingresado en el primer objeto:\n Nombre: ${restautante.NombreR}  Su numero de sedes son: ${restautante.sedes} su direccion es: ${restautante.CaracteristicasR.Dirección} y su especialidad es: ${restautante.CaracteristicasR.Especialidad}.\n
+en cuanto a la informacion creada por el objeto de la clase es la siguiente:\nNOMBRE: ${Restaurante1.nombreRES} DUEÑO: ${Restaurante1.Dueño} ESPECIALIZADO EN: ${Restaurante1.Especialidad} #SEDES: ${Restaurante1.sedesRes}`;
+    }
+
+console.log(Retornador());
