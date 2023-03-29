@@ -1,0 +1,35 @@
+:root{
+    --white:#fff;
+    --blue: #24b9c7;
+}
+
+body{
+    margin: 0;
+    background-color: var(--blue);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ContenedorPrincipal{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.contenedor1{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    background-color: #fff;
+    border: 5px solid salmon;
+}
+
+.contenedor2{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    background-color: #fff;
+    border: 5px solid salmon;
+}
