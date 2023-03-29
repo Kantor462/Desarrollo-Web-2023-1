@@ -154,6 +154,11 @@ console.log(Restaurante1);
 // Tercer Punto
 
     const Retornador = () => {
+
+        //Usando la clase
+let restaurante2 = new Restaurantes ('Frisby',1234,'Alfredo')
+
+    //Usando los Objetos
     return `Los datos Del Restaurante ingresado en el primer objeto:\n Nombre: ${restautante.NombreR}  Su numero de sedes son: ${restautante.sedes} su direccion es: ${restautante.CaracteristicasR.Dirección} y su especialidad es: ${restautante.CaracteristicasR.Especialidad}.\n
 en cuanto a la informacion creada por el objeto de la clase es la siguiente:\nNOMBRE: ${Restaurante1.nombreRES} DUEÑO: ${Restaurante1.Dueño} ESPECIALIZADO EN: ${Restaurante1.Especialidad} #SEDES: ${Restaurante1.sedesRes}`;
     }
